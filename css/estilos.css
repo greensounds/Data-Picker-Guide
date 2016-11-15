@@ -1,0 +1,139 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900);
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1 { margin: 0; }
+
+a { 
+  color: #333;
+  text-decoration: none;
+}
+
+
+div.logo h1{
+  width: 100%;
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+header, nav {
+  display: -webkit-flex;
+  display: flex;
+}
+
+header {
+  background-color: #4fb722;
+  padding: 20px;
+  justify-content: space-between;
+  flex: 1;
+}
+
+nav {
+  justify-content: flex-end;
+  align-self: center;
+}
+
+nav a {
+  width: 100px;
+  text-align: center;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+.banner-principal {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/data-2.png);
+  background-size: cover;
+  color: #000000;
+  text-align: center;
+  font-size: 2em;
+  min-height: 15em;
+}
+
+.banner-graficos {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/banner-grafico.png);
+  background-size: cover;
+  color: #575757;
+  text-align: center;
+  font-size: 2em;
+  min-height: 15em;
+}
+
+.banner-paleta {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/paleta.png);
+  background-size: cover;
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  min-height: 15em;
+}
+
+.banner-lib {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: url(../img/banner-lib.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #575757;
+  text-align: center;
+  font-size: 2em;
+  min-height: 15em;
+}
+
+
+main {
+	max-width: 960px;
+	margin: 0 auto;
+}
+
+footer {
+  flex: 1;
+  background-color: #4fb722;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  padding: .8rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  header, nav {
+    flex-direction: column;
+  }
+
+  header nav a {
+  	padding: .4em;
+  }
+
+  .banner-lib {
+    background-size: contain;
+    font-size: 2em;
+    min-height: 10em;
+  }
+
+}
