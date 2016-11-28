@@ -103,7 +103,31 @@ nav a:hover {
 main {
 	max-width: 960px;
 	margin: 0 auto;
+  flex:8;
 }
+
+.charts {
+  background: rgba(0, 95, 113, 0.625);
+  color: white;
+  padding: 1 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  align-items: flex-start;
+  min-height: 15rem;
+}
+
+.charts article {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+
+.charts article h3{
+  text-align: center;
+}
+
 
 footer {
   flex: 1;
