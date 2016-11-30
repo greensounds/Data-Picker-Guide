@@ -45,6 +45,10 @@ nav a:hover {
   color: #ffffff;
 }
 
+p {
+  /*padding: 1em;*/
+}
+
 .banner-principal {
   padding: 0 3rem;
   display: flex;
@@ -101,31 +105,70 @@ nav a:hover {
 
 
 main {
-	max-width: 960px;
+	max-width: 1200px;
 	margin: 0 auto;
   flex:8;
 }
 
+main h2 {
+  text-align: center;
+}
+
 .charts {
-  background: rgba(0, 95, 113, 0.625);
-  color: white;
-  padding: 1 1.5rem;
+  color: #000000;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-content: flex-start;
-  align-items: flex-start;
+  align-items: flex-end;
   min-height: 15rem;
 }
 
 .charts article {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
   flex-shrink: 0;
   flex-basis: 200px;
 }
 
 .charts article h3{
   text-align: center;
+}
+
+.charts img {
+  width: 100%;
+}
+
+
+
+div.graphic-container h2 {
+  text-align: center;
+}
+
+div.graphic-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+div.graphic-container img.graphic-img {
+  max-width: 100%;
+}
+
+.graphic-charts {
+  color: #000000;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
+  min-height: 15rem;
+}
+
+.graphic-charts article {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 200px;
 }
 
 
