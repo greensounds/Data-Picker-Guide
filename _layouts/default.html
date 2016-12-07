@@ -16,13 +16,17 @@
     	<h1>Data Picker Guide</h1>
     	</a>
 	</div>
-	<nav>
-		<a href="index.html">Inicio</a>
-		<a href="graficos.html">Gráficos</a>
-		<a href="colores.html">Colores</a>
-		<a href="tipografia.html">Tipografía</a>
-		<a href="herramientas.html">Librerías</a>
-		<a href="recursos.html">Recursos</a>
+	<nav class="flex-nav">
+
+		<a href="#" class="toggleNav">☰ Menu</a>
+		<ul>
+			<li><a href="index.html">Inicio</a></li>
+			<li><a href="graficos.html">Gráficos</a></li>
+			<li><a href="colores.html">Colores</a></li>
+			<li><a href="tipografia.html">Tipografía</a></li>
+			<li><a href="herramientas.html">Librerías</a></li>
+			<li><a href="recursos.html">Recursos</a></li>
+		</ul>
 	</nav>
 	</header>
 	{{ content }}
@@ -30,4 +34,14 @@
 	<footer>
 		@Data Picker Guide
 	</footer>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>
+    
+    $(function() {
+      $('.toggleNav').on('click',function() {
+        $('.flex-nav ul').toggleClass('open');
+      });
+    });
+
+  </script>
 </html>

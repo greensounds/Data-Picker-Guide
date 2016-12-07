@@ -17,11 +17,17 @@ div.logo h1{
   text-align: center;
   display: block;
   margin: 0 auto;
+  color: white;
+  padding-top: .4em;
 }
 
 header, nav {
   display: -webkit-flex;
   display: flex;
+}
+
+.toggleNav {
+  display: none;
 }
 
 header {
@@ -37,16 +43,36 @@ nav {
 }
 
 nav a {
-  width: 100px;
+  color:white;
+  font-weight: 100;
+  text-decoration: none;
+  background:rgba(0,0,0,0.2);
+  padding:20px 5px;
+  display: inline-block;
+  width: 100%;
   text-align: center;
+  transition:all 0.5s;
 }
 
 nav a:hover {
-  color: #ffffff;
+  background:rgba(0,0,0,0.3);
+}
+
+.flex-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  padding: 0 .312em;
+  flex:3;
 }
 
 p {
-  /*padding: 1em;*/
+  padding: .5em 1em;
+  text-align: justify;
 }
 
 .banner-principal {
@@ -125,20 +151,38 @@ main h2 {
   min-height: 15rem;
 }
 
+
+
 .charts article {
   /*flex-grow: 1;*/
   flex-shrink: 0;
   flex-basis: 200px;
 }
 
-.charts article h3{
+.charts article h3, .tipografia article h3{
   text-align: center;
 }
 
-.charts img {
+.charts img, .tipografia img, .colores img {
   width: 100%;
 }
 
+.tipografia {
+  color: #000000;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-end;
+  min-height: 15rem;
+}
+
+.tipografia article {
+  /*flex-grow: 1;*/
+  flex-shrink: 0;
+  flex-basis: 30%;
+}
 
 
 div.graphic-container h2 {
@@ -169,6 +213,7 @@ div.graphic-container img.graphic-img {
   flex-grow: 1;
   flex-shrink: 0;
   flex-basis: 200px;
+  padding: .4em;
 }
 
 
@@ -179,6 +224,7 @@ footer {
   font-size: 1em;
   font-weight: bold;
   padding: .8rem;
+  color: white;
 }
 
 
@@ -186,6 +232,15 @@ footer {
   header {
     flex-direction: column;
   }
+
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -194,7 +249,22 @@ footer {
   }
 
   header nav a {
-  	padding: .4em;
+  	padding: .6em;
+  }
+
+  .flex-nav li {
+    flex: 1 1 100%;
+  }
+
+  .toggleNav {
+    display: block;
+  }
+
+  .flex-nav ul {
+    display: none;
+  }
+  .flex-nav .open {
+    display: flex;
   }
 
   .banner-lib {
